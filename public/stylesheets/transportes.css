@@ -1,0 +1,157 @@
+.completo{
+    background-color: rgb(198, 198, 198);
+}
+
+.Cabecera{
+    color: rgb(56, 56, 56);
+    width: 100%;
+    margin-left: 3%;
+    background-color: rgb(78, 153, 206);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    margin-top: 20px;
+    border: 0.5px solid black;
+    box-shadow: 0 0 5px black;
+    
+}
+
+.animacion{
+    width: 30px;
+    height: 30px;
+    background-color: #8f99a4;
+    
+    animation-name: MiAnimacion;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    
+        }
+    
+    @keyframes MiAnimacion {
+        from {
+            font-size:0%;
+            margin-left:100%;
+        }
+    
+        50% {
+            font-size:90%;
+            margin-left:50%;
+        }
+    
+        to {
+            font-size:90%;
+            margin-left:5%;
+            width:100%;
+        }
+    }
+h1{
+    margin-top: 50px;
+    margin-left: 10px;
+  
+}
+
+nav ul li {
+    width: 18%;
+    display: inline-block;
+    justify-content: space-evenly;
+    border: 1px solid;
+    border-radius: 0.25em;
+    margin-left: 5%;
+    box-shadow: 0 0 5px black;
+      
+    
+}
+nav ul li a{
+    background-color: rgb(44, 76, 99);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 0.2em 0.4em;
+    
+}
+
+nav ul li a:hover{
+    background-color: rgb(64, 137, 153);
+    color: aliceblue;
+}
+
+main img{   
+    float: right;
+    width: 330px;
+    height: 220px;
+}
+
+.Cuerpo{
+    position: relative;
+    height: 1220px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(78, 153, 206);
+    color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+    border: 0.5px solid rgb(196, 196, 196);
+    box-shadow: 0 0 5px black;
+    
+}
+.box1{
+    font-size: medium;  
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 15px;
+    height: 155px;
+}
+
+.box2{
+    height: 200px;
+   padding-top: 50px;
+   padding-left: 30px;
+   padding-bottom: 50px;
+   background-color: rgb(0, 0, 0);
+}
+
+.titulo1{
+    color: rgb(248, 248, 248);
+
+}
+
+.boxA{
+    margin-left: 30px;
+    
+}
+
+.box3{
+    font-size: small;
+    float: left;
+    color: black;
+    width: 150px;
+    height: 300px;
+    border: 1.2px solid black;
+    background-color: aliceblue;
+    padding-top: 50px;
+    text-align: center;
+    margin-left: 3%;
+    box-shadow: 0 0 5px rgb(62, 61, 61);
+}
+.box3:hover{
+    transform: scale(1.05);  
+    background-color: #afafaf;
+}
+
+.box4{
+
+    padding-top: 15px;
+    position: static;
+    font-size: small;
+    float: left;
+    color: black;
+    
+    
+}
+
+
+
+
+
+
+
+
