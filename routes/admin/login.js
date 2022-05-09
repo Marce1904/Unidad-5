@@ -6,21 +6,23 @@ var usuariosModels = require('./../../models/usuariosModels');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('admin/login', {
-      
+  res.render('admin/login', {     
     layout: 'admin/layout'
     });
 });
 
 router.post('/', async (req, res, next) => {
   try {
-    var usuarios = req.body.usuarios;
+    var usuario = req.body.usuario;
     var password = req.body.password;
 
-    var data = await usuariosModels.getUserByUsernameAndPassword(usuarios,password);
+    var data = await usuariosModels.getUserByUsernameAndPassword(usuario, password);
 
     if (data != undefined) {
+      req.session.id_usuario = data.id;
+      req.session.nombre = data.usuario;
       res.redirect('/admin/novedades');
+
     } else {
       res.render('admin/login', {
         layout: 'admin/layout',
@@ -30,7 +32,16 @@ router.post('/', async (req, res, next) => {
   } catch(error) {
     console.log(error);
   }
+
 });
+
+router.get('/logout', function (req, res, next){
+  req.session.destroy();
+  res.render('admin/login', {
+    layout: 'admin/layout'
+  });
+});
+
 
 module.exports = router;
   
